@@ -1,0 +1,124 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    overflow-x:hidden;
+}
+#nav{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    /* z-index: -1; */
+    /* overflow: hidden; */
+    /* position: absolute; */
+}
+#nav>div:first-child>a{
+    margin-left: 5%;
+}
+#nav>div:first-child{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    /* border: 1px solid; */
+}
+#menu{
+    height: 40px;
+}
+#logo{
+    width: 80%;
+    /* height: 105%; */
+}
+#nav>div:last-child{
+    /* border: 1px solid; */
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+}
+#nav a{
+    text-decoration: none;
+    color: black;
+}
+
+/* #search{
+    font-size: 90%;
+    margin-right: 12%;
+    border-bottom: 1px solid;
+    text-align: left;
+    padding-right: 20px;
+} */
+#search{
+    text-decoration: none;
+    color: black;
+    font-size: 140%;
+    padding-right: 5%;
+    border-bottom: 1px solid;
+    margin-right: 12%;
+}
+#nav>div:last-child>div{
+    width: 10%;
+    /* height: 90%; */
+    /* border: 1px transparent; */
+    display: flex;
+}
+#nav>div:last-child>div>img{
+    width: 70%;
+    align-self: center;
+    margin: auto;
+}
+#nav>div:last-child>div>p{
+    position:absolute;
+    padding: 1.1%;
+    padding-top: 1.25%;
+    /* text-align: center; */
+    align-self: center;
+    font-size: 110%;
+}
+body>div:nth-child(2){
+    /* border: 1px solid; */
+    /* height: 20px; */
+    display: flex;
+    justify-content: center;
+}
+body>div:nth-child(2)>p{
+    margin: 1%;
+    margin-top: 0%;
+    font-size: 70%;
+    color: grey;
+}
+#searchbar{
+    border: 0px;
+    margin-top: 5%;
+    width: 85%;
+    margin-left: 7%;
+    border-bottom: 1px solid;
+    border-color: black;
+    padding: 0.5%;
+    padding-left: 0%;
+    font-size: 105%;
+}
+
+::placeholder{
+    color: black;
+}
+
+#searchbar:focus{
+    outline: none;
+}
+
+#trends{
+    margin-left: 7%;
+    font-size: 77%;
+    margin-top: 3%;
+    display: none;
+}
+
+#trends>p{
+    color: grey;
+    margin-top: 1%;
+}

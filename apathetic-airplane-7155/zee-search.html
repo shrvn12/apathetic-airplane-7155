@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="search.css">
+
+<body>
+    <div id="nav">
+        <div>
+        <img id="menu" src="images\menu-removebg.png"/>
+        <a href="home.html">
+          <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
+        </a>
+        </div>
+        <!-- <img src="images/cart-removebg-preview.png"> -->
+        <div>
+            <!-- <span id="search">SEARCH</span> -->
+            <!-- <a id="search" href="zee-search.html">search</a> -->
+            <a href="login.html">LOGIN</a>
+            <a>HELP</a>
+            <div>
+                <img src="images/cart-removebg-preview.png" alt="">
+                <p>0</p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p>WOMAN</p>
+        <P>MAN</P>
+        <P>KIDS</P>
+    </div>
+    <input id="searchbar" placeholder="ENTER SEARCH TERMS"/>
+    <div id="trends">
+        <p><b>Trends</b></p>
+        <p>DRESS</p>
+        <p>DISNEY</p>
+        <p>JACKETS</p>
+        <p>CHRISTMAS</p>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("#searchbar").addEventListener("focus", function(){
+        document.querySelector("#trends").style.display = "block"
+    })
+
+    document.querySelector("#searchbar").addEventListener("blur", function(){
+        document.querySelector("#trends").style.display = "none"
+    })
+</script>

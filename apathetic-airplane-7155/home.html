@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZEE STORE India | New Collection</title>
+</head>
+
+<link rel="stylesheet" href="home.css">
+
+<body>
+    <div id="nav">
+        <div>
+        <img id="menu" src="images\menu-removebg.png"/>
+        <a href="home.html">
+          <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
+        </a>
+        
+        </div>
+        <!-- <img src="images/cart-removebg-preview.png"> -->
+        <div>
+            <!-- <span id="search">SEARCH</span> -->
+            <a id="search" href="zee-search.html">search</a>
+            <a href="login.html">LOGIN</a>
+            <a>HELP</a>
+            <div>
+                <img src="images/cart-removebg-preview.png" alt="">
+                <p>0</p>
+            </div>
+        </div>
+    </div>
+    <div id="menudiv">
+        <div>
+            <a>WOMEN</a>
+            <a>MEN</a>
+            <a>KIDS</a>
+            <a>ZEE ORIGINS</a>
+        </div>
+        <div>
+            <a>NEW</a>
+            <a>PARTYNEW</a>
+            <a>BEST SELLERSNEW</a>
+            <a>BASICS</a>
+            <a>COATS | PUFFER JACKETS</a>
+            <a>DRESSES | JUMPSUITS</a>
+            <a>SHIRTS</a>
+            <a>BLAZERS</a>
+            <a>TROUSERS</a>
+            <a>TOPS</a>
+            <a>JEANS</a>
+            <a>KNITWEAR</a>
+            <a>JACKETS | OVERSHIRTS</a>
+            <a>SWEATSHIRTS</a>
+            <a>T-SHIRTS</a>
+            <a>WAISTCOATS | GILETS</a>
+            <a>SKIRTS | SHORTS</a>
+            <a>CO-ORD SETS</a>
+            <a>SUITS</a>
+            <a>ACCESSORIES</a>
+            <a>SHOES</a>
+            <a>BAGS</a>
+            <a>PERFUMES</a>
+            <a>SPECIAL PRICES</a>
+            <a>S P E C I A L &nbsp; E D I T I O N</a>
+            <a>GIFT CARD</a>
+            <a>JOIN LIFE</a>
+            <a>+INFO</a>
+        </div>
+    </div>
+    <!-- <div id="fde"></div>
+    <button onclick = "document.getElementById('fde').classList.toggle('hide')">
+        Toggle
+      </button> -->
+</body>
+</html>
+
+<script>
+    // document.querySelector("#menudiv").classList.toggle("hide");
+    document.querySelector("#menu").addEventListener("click", function(){
+       if(document.querySelector("#menudiv").style.display == "block"){
+            document.querySelector("#menudiv").style.display = "none";
+        }
+        else{
+        document.querySelector("#menudiv").style.display = "block";
+        } 
+    })
+    
+    document.querySelector("#logo").addEventListener("click", function(){
+        location.href="home.html"
+    })
+</script>
