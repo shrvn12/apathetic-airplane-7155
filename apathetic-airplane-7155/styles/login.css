@@ -1,0 +1,69 @@
+#cont{
+    width: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 10%;
+    padding-left: 3%;
+}
+
+#log{
+    /* border: 1px solid; */
+    width: 20%;
+    /* margin-top: 10%; */
+    padding: 3%;
+    /* margin-left: 3%; */
+}
+
+#log>input{
+    width: 100%;
+    margin-bottom: 10%;
+    border: 0px;
+    border-bottom: 1px solid;
+}
+::placeholder{
+    font-size: 80%;
+}
+#log>input:focus{
+    outline: none;
+}
+#log>a{
+    color: grey;
+    font-size: 65%;
+}
+
+#log>input:last-child{
+    margin-top: 10%;
+    width: 100%;
+    color: white;
+    background-color: black;
+    border: 0px;
+    padding: 3%;
+}
+
+#reg{
+    /* border: 1px solid; */
+    width: 25%;
+    padding: 3%;
+    margin-left: 10%;
+}
+#reg>p{
+    color: grey;
+    font-size: 70%;
+    
+}
+#reg>button{
+    margin-top: 10%;
+    width: 70%;
+    background-color: black;
+    border: 0px;
+    padding: 3%;
+}
+#reg a{
+    color: black;
+    font-weight: bold;
+}
+#reg>button>a{
+    color: white;
+    text-decoration: none;
+}
