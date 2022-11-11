@@ -1,0 +1,128 @@
+
+#menudiv{
+    height: 100vh;
+    width: 30%;
+    padding: 2%;
+    /* border: 1px solid; */
+    z-index: 2;
+    display: none;
+    position:fixed;
+    /* margin-top: -5%; */
+    /* position: absolute; */
+    background-color: white;
+}
+/* #menudiv { transition: opacity 1s; } */
+#menudiv>div:first-child{
+    /* border: 1px solid; */
+    width: 70%;
+    font-size: 80%;
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    color: grey;
+}
+#menudiv>div:last-child{
+    /* border: 1px solid; */
+    width: auto;
+    height: 60%;
+    font-size: 70%;
+    margin-top: 22%;
+    margin-bottom: 20%;
+    overflow: scroll;
+}
+#menudiv>div:last-child>a{
+    display: block;
+    color: grey;
+    margin-top: 2%;
+}
+#menudiv>div:last-child>a:nth-last-child(5){
+    color: rgb(211, 130, 144);
+    font-style: italic;
+}
+#menudiv>div:last-child>a:nth-last-child(4){
+    font-stretch:ultra-expanded;
+    color: black;
+}
+#menudiv>div:last-child>a:nth-last-child(3),#menudiv>div:last-child>a:nth-last-child(2),#menudiv>div:last-child>a:nth-last-child(1){
+    margin-top: 15%;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #acaaaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+#nav{
+    position: absolute;
+}
+#menu{
+    z-index: 3;
+}
+#alogo{
+    z-index: 3;
+}
+#left,#right{
+    font-size: 20px;
+    border-radius: 10px;
+    height: 30%;
+    /* width: 10%; */
+    border: 0px;
+    /* margin: 1%; */
+    background-color: transparent;
+    padding: 1%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: transparent;
+    z-index: 2;
+    position: absolute;
+}
+#left{
+    align-self: center;
+    margin-left: 2%;
+}
+#right{
+    align-self: center;
+    margin-left:90%;
+}
+#left:hover{
+    color: grey;
+}
+#right:hover{
+    color: grey;
+}
+#imgs{
+    display: flex;
+    justify-content: space-between;
+    position:initial;
+    z-index: -2;
+}
+#womens{
+    cursor: default;
+}
+
+@media screen and (min-width: 400px) and (max-width:700px){
+    #imgs{
+        width: 150%;
+        margin-left: -25%;
+    }
+    #left{
+        align-self: center;
+        margin-left: 28%;
+    }
+    #right{
+        align-self: center;
+        margin-left:117%;
+    }
+}

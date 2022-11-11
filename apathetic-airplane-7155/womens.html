@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens</title>
+</head>
+
+<link rel="stylesheet" href="styles/nav.css">
+<link rel="stylesheet" href="styles/menu.css">
+<link rel="stylesheet" href="styles/bottomsec.css">
+<link rel="stylesheet" href="styles/womens.css">
+
+<body>
+    <div id="top">
+        <div id="nav">
+        <div>
+        <img id="menu" src="images\menu-removebg.png"/>
+        <a href="home.html" id="alogo">
+          <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
+        </a>
+        
+        </div>
+        <div>
+            <a id="search" href="zee-search.html">search</a>
+            <a href="login.html">LOGIN</a>
+            <a>HELP</a>
+            <div>
+                <img src="images/cart-removebg-preview.png" alt="">
+                <p><a href="cart.html">0</a></p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="menudiv">
+        <div>
+            <a>WOMEN</a>
+            <a>MEN</a>
+            <a>KIDS</a>
+            <a>ZEE ORIGINS</a>
+        </div>
+        <div>
+            <a>NEW</a>
+            <a>PARTYNEW</a>
+            <a>BEST SELLERSNEW</a>
+            <a>BASICS</a>
+            <a>COATS | PUFFER JACKETS</a>
+            <a>DRESSES | JUMPSUITS</a>
+            <a>SHIRTS</a>
+            <a>BLAZERS</a>
+            <a>TROUSERS</a>
+            <a>TOPS</a>
+            <a>JEANS</a>
+            <a>KNITWEAR</a>
+            <a>JACKETS | OVERSHIRTS</a>
+            <a>SWEATSHIRTS</a>
+            <a>T-SHIRTS</a>
+            <a>WAISTCOATS | GILETS</a>
+            <a>SKIRTS | SHORTS</a>
+            <a>CO-ORD SETS</a>
+            <a>SUITS</a>
+            <a>ACCESSORIES</a>
+            <a>SHOES</a>
+            <a>BAGS</a>
+            <a>PERFUMES</a>
+            <a>SPECIAL PRICES</a>
+            <a>S P E C I A L &nbsp; E D I T I O N</a>
+            <a>GIFT CARD</a>
+            <a>JOIN LIFE</a>
+            <a>+INFO</a>
+        </div>
+        </div>
+    
+    <div id="cont">
+        
+    </div>
+
+    <div id="bottomsec">
+        <div id="bcards">
+            <div>
+            <h4>HELP</h4>
+            <a>SHOP AT ZARA.COM</a>
+            <a>PRODUCT</a>
+            <a>GIFT CARD</a>
+            <a>PAYMENT</a>
+            <a>SHIPPING</a>
+            <a>EXCHANGES AND RETURNS</a>
+            <a>SHOPS AND COMPANY</a>
+            <a>CLOTHES COLLECTION PROGRAMME</a>
+            <a>MY ACCOUNT</a>
+        </div>
+        <div>
+            <h4>FOLLOW US</h4>
+            <a>NEWSLETTER</a>
+            <a>INSTAGRAM</a>
+            <a>FACEBOOK</a>
+            <a>TWITTER</a>
+            <a>PINTEREST</a>
+            <a>YOUTUBE</a> 
+        </div>
+        <div>
+            <h4>COMPANY</h4>
+            <a>ABOUT US</a>
+            <a>JOIN LIFE</a>
+            <a>OFFICES</a>
+            <a>STORES</a>
+            <a>WORK WITH US</a>
+        </div>
+        <div>
+            <h4>POLICIES</h4>
+            <a>PRIVACY POLICY</a>
+            <a>PURCHASE CONDITIONS</a>
+            <a>GIFT CARD CONDITIONS</a>
+            <a>COOKIES SETTINGS</a>
+        </div>
+    </div>
+    <div>
+        <p>INDIA</p>
+        <p>ENGLISH <a>►ALL RIGHTS RESERVED</a></p>
+        
+    </div>
+    <div>
+        <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+        <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+        <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+document.querySelector("#menu").addEventListener("click", function(){
+       if(document.querySelector("#menudiv").style.display == "block"){
+            document.querySelector("#menudiv").style.display = "none";
+        }
+        else{
+        document.querySelector("#menudiv").style.display = "block";
+        } 
+    })
+
+    let url = "https://636e297ab567eed48ad4f1db.mockapi.io/Products?page=1&limit=16"
+
+    async function getdata(){
+        try{
+            let res = await fetch(url);
+            let out = await res.json();
+            data = [...out]
+            display(out);
+            console.log(data);
+            console.log(out);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    getdata();
+
+    function display(data){
+        document.querySelector("#cont").innerHTML = "";
+        data.forEach(elem => {
+            let div = document.createElement("div");
+            let div2 = document.createElement("div");
+
+            let proimg = document.createElement("img");
+            proimg.setAttribute("src",elem.image);
+
+            let Title = document.createElement("a");
+            Title.innerText = elem.title;
+            Title.setAttribute("href","product.html")
+
+            let Price = document.createElement("p");
+            Price.innerText = elem.price;
+
+            div.append(proimg,div2);
+            div2.append(Title, Price);
+            div.addEventListener("click",function(){
+                location.href = "product.html";
+            })
+            document.querySelector("#cont").append(div);
+        });
+    }
+
+</script>

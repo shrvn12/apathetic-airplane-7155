@@ -1,0 +1,119 @@
+#menudiv{
+    height: 100vh;
+    width: 30%;
+    padding: 2%;
+    /* border: 1px solid; */
+    z-index: 2;
+    display: none;
+    position:fixed;
+    /* margin-top: -5%; */
+    /* position: absolute; */
+    background-color: white;
+}
+/* #menudiv { transition: opacity 1s; } */
+#menudiv>div:first-child{
+    /* border: 1px solid; */
+    width: 70%;
+    font-size: 80%;
+    margin-top: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    color: grey;
+}
+#menudiv>div:last-child{
+    /* border: 1px solid; */
+    width: auto;
+    height: 60%;
+    font-size: 70%;
+    margin-top: 22%;
+    margin-bottom: 20%;
+    overflow: scroll;
+}
+#menudiv>div:last-child>a{
+    display: block;
+    color: grey;
+    margin-top: 2%;
+}
+#menudiv>div:last-child>a:nth-last-child(5){
+    color: rgb(211, 130, 144);
+    font-style: italic;
+}
+#menudiv>div:last-child>a:nth-last-child(4){
+    font-stretch:ultra-expanded;
+    color: black;
+}
+#menudiv>div:last-child>a:nth-last-child(3),#menudiv>div:last-child>a:nth-last-child(2),#menudiv>div:last-child>a:nth-last-child(1){
+    margin-top: 15%;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #acaaaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+#nav{
+    position: absolute;
+}
+
+@media screen and (min-width: 0px) and (max-width:399px){
+    #menudiv{
+        height: 100vh;
+        width: 30%;
+        padding: 2%;
+        /* border: 1px solid; */
+        z-index: 2;
+        display: none;
+        position:fixed;
+        /* margin-top: -5%; */
+        /* position: absolute; */
+        background-color: white;
+    }
+    #menudiv>div:first-child{
+        /* border: 1px solid; */
+        width: 70%;
+        font-size: 80%;
+        margin-top: 100%;
+        display: block;
+        /* justify-content: space-evenly; */
+        color: grey;
+        font-size: 60%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width:700px){
+    #menudiv{
+        height: 100vh;
+        width: 30%;
+        padding: 2%;
+        /* border: 1px solid; */
+        z-index: 2;
+        display: none;
+        position:fixed;
+        /* margin-top: -5%; */
+        /* position: absolute; */
+        background-color: white;
+    }
+    #menudiv>div:first-child{
+        /* border: 1px solid; */
+        width: 70%;
+        font-size: 80%;
+        margin-top: 40%;
+        display: block;
+        /* justify-content: space-evenly; */
+        color: grey;
+        font-size: 60%;
+    }
+}
+    

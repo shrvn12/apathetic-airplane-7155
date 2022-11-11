@@ -1,0 +1,74 @@
+#bottomsec{
+    padding-left: 5%;
+    margin-top: 30%;
+    /* border: 1px solid; */
+}
+
+#bcards{
+    display: flex;
+}
+
+#bcards>div{
+    /* border: 1px solid; */
+    margin: 2%;
+}
+
+#bcards a{
+    display: block;
+    color: rgb(104, 104, 104);
+    font-size: 70%;
+    margin-top: 1.5%; 
+}
+#bcards a:hover{
+    text-decoration: underline black;
+}
+#bcards h4{
+    font-size: 70%;
+}
+#bottomsec>div:nth-last-child(2){
+    margin-top: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+#bottomsec>div:nth-last-child(2)>p,#bottomsec>div:last-child>p{
+    color: rgb(104, 104, 104);
+    font-size: 70%;
+    line-height: 0.5em;
+}
+#bottomsec>div:nth-last-child(2) a{
+    color: rgb(156, 156, 156);
+}
+#bottomsec>div:last-child{
+    margin-top: 5%;
+}
+
+@media screen and (min-width: 0px) and (max-width:399px){
+    #bottomsec{
+        padding-left: 5%;
+        margin-top: 770%;
+        /* border: 1px solid; */
+    }
+    #bottomsec>div:nth-last-child(2)>p,#bottomsec>div:last-child>p{
+        color: rgb(104, 104, 104);
+        font-size: 70%;
+        line-height: 1em;
+    }
+    #bcards{
+        display: block;
+    }
+    
+}
+
+@media screen and (min-width: 400px) and (max-width:700px){
+    #bottomsec{
+        padding-left: 5%;
+        margin-top: 90%;
+        /* border: 1px solid; */
+    }
+    #bottomsec>div:nth-last-child(2)>p,#bottomsec>div:last-child>p{
+        color: rgb(104, 104, 104);
+        font-size: 70%;
+        line-height: 1em;
+    }
+}
