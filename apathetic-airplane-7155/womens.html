@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens</title>
+</head>
+
+<link rel="stylesheet" href="styles/nav.css">
+<link rel="stylesheet" href="styles/menu.css">
+<link rel="stylesheet" href="styles/bottomsec.css">
+<link rel="stylesheet" href="styles/womens.css">
+
+<style>
+    #nav{
+        position:static;
+    }
+    #fil{
+        /* border: 1px solid black; */
+        width: 90%;
+        margin: auto;
+        margin-top: -2%;
+        text-align: end;
+    }
+    #rang{
+        -webkit-appearance: none;
+        appearance: none;
+        height: 1px;
+        background: black;
+        outline: none;
+    }
+
+    #rang::-webkit-slider-thumb{
+        appearance: none;
+        background: black;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+
+    #filter{
+        background-color: white;
+        font-size: 75%;
+        border-color: black;
+        color: grey;
+        padding: 0.5%;
+    }
+
+    #fmenu>div{
+        border: 1px solid;
+        width: 30%;
+        margin-left: auto;
+        margin-top: -7%;
+        background-color: white;
+        position: relative;
+        padding: 3%;
+    }
+
+    #fmenu>div>div{
+        border: 1px solid;
+        height: 20px;
+        display: flex;
+    }
+    #fmenu img{
+        height: 100%;
+        display: block;
+        margin-left: auto;
+    }
+
+    #fmenu p{
+        margin-top: 2px;
+    }
+    .fdiv{
+        margin-top: 2%;
+    }
+    .fdiv>p{
+        font-size: 80%;
+        color: grey;
+    }
+
+    .fdiv1{
+        position: fixed;
+        width: 30%;
+    }
+    #fmenu>div:nth-child(2){
+        margin-top: 15%;
+    }
+</style>
+
+<body>
+    <div id="top">
+        <div id="nav">
+        <div>
+        <img id="menu" src="images\menu-removebg.png"/>
+        <a href="home.html" id="alogo">
+          <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
+        </a>
+        
+        </div>
+        <div>
+            <a id="search" href="zee-search.html">SEARCH</a>
+            <a href="login.html">LOGIN</a>
+            <a>HELP</a>
+            <div>
+                <img src="images/cart-removebg-preview.png" alt="">
+                <p><a href="cart.html">0</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="fil">
+        <input id="rang" type="range" min="1" max="3">
+        <button id="filter">FILTERS</button>
+    </div>
+    <div id="fmenu">
+        <div class="fdiv1">
+            <img src="/images/cross-removebg-preview.png" alt="">
+        </div>
+        <div id="opt">
+            <div class="fdiv">
+            <p>COLOUR</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>CHARACTERSTICS</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>FIT</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>TYPE OF PRODUCT</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>TYPE OF SLEEVE</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>LENGTH</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>SIZE</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>SIZES FOOTWEAR/ACCESSORIES</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>MATERIALS</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        <div class="fdiv">
+            <p>COLLECTION</p>
+            <img src="images\plus-removebg-preview.png" alt="">
+        </div>
+        </div>
+        
+    </div>
+</div>
+
+    <div id="menudiv">
+        <div>
+            <a>WOMEN</a>
+            <a>MEN</a>
+            <a>KIDS</a>
+            <a>ZEE ORIGINS</a>
+        </div>
+        <div>
+            <a>NEW</a>
+            <a>PARTYNEW</a>
+            <a>BEST SELLERSNEW</a>
+            <a>BASICS</a>
+            <a>COATS | PUFFER JACKETS</a>
+            <a>DRESSES | JUMPSUITS</a>
+            <a>SHIRTS</a>
+            <a>BLAZERS</a>
+            <a>TROUSERS</a>
+            <a>TOPS</a>
+            <a>JEANS</a>
+            <a>KNITWEAR</a>
+            <a>JACKETS | OVERSHIRTS</a>
+            <a>SWEATSHIRTS</a>
+            <a>T-SHIRTS</a>
+            <a>WAISTCOATS | GILETS</a>
+            <a>SKIRTS | SHORTS</a>
+            <a>CO-ORD SETS</a>
+            <a>SUITS</a>
+            <a>ACCESSORIES</a>
+            <a>SHOES</a>
+            <a>BAGS</a>
+            <a>PERFUMES</a>
+            <a>SPECIAL PRICES</a>
+            <a>S P E C I A L &nbsp; E D I T I O N</a>
+            <a>GIFT CARD</a>
+            <a>JOIN LIFE</a>
+            <a>+INFO</a>
+        </div>
+        </div>
+    
+    <div id="cont">
+        
+    </div>
+
+    <div id="bottomsec">
+        <div id="bcards">
+            <div>
+            <h4>HELP</h4>
+            <a>SHOP AT ZARA.COM</a>
+            <a>PRODUCT</a>
+            <a>GIFT CARD</a>
+            <a>PAYMENT</a>
+            <a>SHIPPING</a>
+            <a>EXCHANGES AND RETURNS</a>
+            <a>SHOPS AND COMPANY</a>
+            <a>CLOTHES COLLECTION PROGRAMME</a>
+            <a>MY ACCOUNT</a>
+        </div>
+        <div>
+            <h4>FOLLOW US</h4>
+            <a>NEWSLETTER</a>
+            <a>INSTAGRAM</a>
+            <a>FACEBOOK</a>
+            <a>TWITTER</a>
+            <a>PINTEREST</a>
+            <a>YOUTUBE</a> 
+        </div>
+        <div>
+            <h4>COMPANY</h4>
+            <a>ABOUT US</a>
+            <a>JOIN LIFE</a>
+            <a>OFFICES</a>
+            <a>STORES</a>
+            <a>WORK WITH US</a>
+        </div>
+        <div>
+            <h4>POLICIES</h4>
+            <a>PRIVACY POLICY</a>
+            <a>PURCHASE CONDITIONS</a>
+            <a>GIFT CARD CONDITIONS</a>
+            <a>COOKIES SETTINGS</a>
+        </div>
+    </div>
+    <div>
+        <p>INDIA</p>
+        <p>ENGLISH <a>►ALL RIGHTS RESERVED</a></p>
+        
+    </div>
+    <div>
+        <p>NAME AND ADDRESS OF THE MANUFACTURER:</p>
+        <p>INDUSTRIA DE DISEÑO TEXTIL, S.A. (INDITEX, S.A.)</p>
+        <p>AVENIDA DE LA DIPUTACIÓN, EDIFICIO INDITEX, 15143, ARTEIXO (A CORUÑA), SPAIN</p>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+
+document.querySelector("#menu").addEventListener("click", function(){
+       if(document.querySelector("#menudiv").style.display == "block"){
+            document.querySelector("#menudiv").style.display = "none";
+        }
+        else{
+        document.querySelector("#menudiv").style.display = "block";
+        } 
+    })
+
+    // document.querySelector
+
+    let url = "https://636e297ab567eed48ad4f1db.mockapi.io/Products?page=1&limit=16"
+
+    async function getdata(){
+        try{
+            let res = await fetch(url);
+            let out = await res.json();
+            data = [...out]
+            display(out);
+            console.log(data);
+            console.log(out);
+        }
+        catch (err) {
+            console.log(err);
+        }
+    }
+
+    getdata();
+
+    function display(data){
+        document.querySelector("#cont").innerHTML = "";
+        data.forEach(elem => {
+            let div = document.createElement("div");
+            let div2 = document.createElement("div");
+
+            let proimg = document.createElement("img");
+            proimg.setAttribute("src",elem.image);
+
+            let Title = document.createElement("a");
+            Title.innerText = elem.title;
+            Title.setAttribute("href","product.html")
+
+            let Price = document.createElement("p");
+            Price.innerText = elem.price;
+
+            div.append(proimg,div2);
+            div2.append(Title, Price);
+            div.addEventListener("click",function(){
+                location.href = "product.html";
+            })
+            document.querySelector("#cont").append(div);
+        });
+    }
+
+    document.querySelector("#rang").addEventListener("change", function(){
+        let val = document.querySelector("#rang").value
+        if(val == 1){
+            document.querySelector("#cont").style.gridTemplateColumns = "repeat(1,1fr)"
+            document.querySelector("#cont").style.width = "40%";
+            document.querySelector("#cont").style.margin = "auto";
+            let divs = document.querySelectorAll("#cont>div>div")
+            for(let x = 0; x < divs.length; x++) {
+                divs[x].style.display = "block"
+            }
+        }
+        if(val == 2){
+            document.querySelector("#cont").style.gridTemplateColumns = "repeat(4,1fr)"
+            document.querySelector("#cont").style.width = "100%";
+            let divs = document.querySelectorAll("#cont>div>div")
+            for(let x = 0; x < divs.length; x++) {
+                divs[x].style.display = "block"
+            }
+        }
+        if(val == 3){
+            document.querySelector("#cont").style.gridTemplateColumns = "repeat(8,1fr)"
+            document.querySelector("#cont").style.width = "100%";
+            document.querySelector("#cont").style.gap = "0.5%"
+
+            let divs = document.querySelectorAll("#cont>div>div")
+            for(let x = 0; x < divs.length; x++) {
+                divs[x].style.display = "none"
+            }
+        }
+    })
+
+</script>

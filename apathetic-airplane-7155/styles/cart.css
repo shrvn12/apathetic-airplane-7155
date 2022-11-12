@@ -1,0 +1,36 @@
+#nav{
+    margin-left: 2%;
+    width: 98%;
+}
+#nav>div:last-child{
+    /* border: 1px solid; */
+    width: min-content;
+    align-items: flex-start;
+    margin-right: 2%;
+}
+#nav>div:last-child>a{
+    color: rgb(109, 109, 109);
+}
+#head{
+    /* border: 1px solid; */
+    display: flex;
+    margin-top: 5%;
+    margin-left: 4%;
+}
+#head>a{
+    margin: 1%;
+}
+#head>a:first-child{
+    color: black;
+    font-weight: bold;
+}
+#cart{
+    /* border: 1px solid; */
+    height: 50vh;
+    display: flex;
+    align-items: center;
+}
+#cart>p{
+    margin: auto;
+    font-size: 70%;
+}
