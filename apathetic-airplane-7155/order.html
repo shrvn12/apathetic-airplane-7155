@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN / CREATE ACCOUNT</title>
+    <title>PLACE ORDER</title>
 </head>
-
+ 
 <link rel="stylesheet" href="styles/nav.css">
 <link rel="stylesheet" href="styles/bottomsec.css">
-<link rel="stylesheet" href="styles/login.css">
+<link rel="stylesheet" href="styles\register.css">
 
 <body>
     <div id="nav">
@@ -23,6 +23,7 @@
         <div>
             <!-- <span id="search">SEARCH</span> -->
             <a id="search" href="zee-search.html">search</a>
+            <a href="login.html">LOGIN</a>
             <a>HELP</a>
             <div>
                 <img src="images/cart-removebg-preview.png" alt="">
@@ -30,23 +31,40 @@
             </div>
         </div>
     </div>
+    <div>
+        <h4>PERSONAL DETAILS</h4>
+    </div>
     <div id="cont">
-        <form id="log">
-            <h4>LOGIN</h4>
-            <input type="email" id="email" placeholder="E-MAIL" required>
-            <input type="password" id="pass" placeholder="PASSWORD" required>
-            <a>HAVE YOU FORGOTTEN YOUR PASSWORD?</a>
-            <input id="submit" type="submit"/>
-        </form>
-        <div id="reg">
-            <h4>REGISTER</h4>
-            <p>
-                IF YOU STILL DON'T HAVE A <a>ZEESTORE.COM</a> ACCOUNT, USE THIS OPTION TO ACCESS THE REGISTRATION FORM.
-            </p>
-            <p>
-                 BY GIVING US YOUR DETAILS, PURCHASING IN <a>ZEESTORE.COM</a> WILL BE FASTER AND AN ENJOYABLE EXPERIENCE.
-            </p>
-            <button><a href="register.html">CREATE ACCOUNT</a></button>
+        <div>
+            <from id="f1">
+            <!-- <input type="radio" value="private">
+            <label>PRIVATE</label>
+            <input type="radio" value="private">
+            <label>COMPANY</label> -->
+            <input id="em" type="email" placeholder="EMAIL" required>
+            <input id="name" type="text" placeholder="NAME">
+            <input type="text" placeholder="ADDRESS">
+            <input type="text" placeholder="LOCALITY">
+            <p id="state">STATE</p>
+            <select>
+                <option value="">--</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="New Delhi">Mumbai</option>
+                <option value="New Delhi">Kanpur</option>
+                <option value="New Delhi">Himachal Pradesh</option>
+                <option value="New Delhi">Bangalore</option>
+                <option value="New Delhi">Guwahati</option>
+            </select>
+            <input id="num" type="number" placeholder="TELEPHONE">
+            <input id="submit" type="submit" value="PLACE ORDER"/>
+        </from>
+        </div>
+        <div>
+            <form id="f2">
+                <input type="text" placeholder="PINCODE">
+                <input type="text" placeholder="MORE INFO (OPTIONAL)">
+                <input type="text" placeholder="CITY">
+            </form>
         </div>
     </div>
     <div id="bottomsec">
@@ -103,19 +121,13 @@
 </html>
 
 <script>
+    document.querySelector("#submit").value = "("+localStorage.getItem("tprice")+") "+" PLACE ORDER"
     document.querySelector("#submit").addEventListener("click", function(){
-        if(localStorage.getItem("email") == null) {
-            alert("YOUR ARE NOT REGISTERED");
-            location.href = "register.html"
+        if(document.querySelector("#em").value == "" || document.querySelector("#name").value == ""){
+            alert("PLEASE FILL OUT ALL THE FEILDS")
         }
         else{
-            if(document.querySelector("#email").value == localStorage.getItem("email") && document.querySelector("#pass").value == localStorage.getItem("pass")){
-                alert("LOGIN SUCESS");
-                location.href = "home.html";
-            }
-            else{
-                alert("WRONG CREDENTIALS");
-            }
+            alert("YOUR ORDER HAS BEEN PLACED");
         }
     })
 </script>

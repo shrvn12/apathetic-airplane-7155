@@ -4,50 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZEE SEARCH</title>
+    <title>Document</title>
 </head>
-
-<link rel="stylesheet" href="styles/search.css">
 <link rel="stylesheet" href="styles/nav.css">
 <link rel="stylesheet" href="styles/bottomsec.css">
-
-<style>
-    
-</style>
+<link rel="stylesheet" href="styles/cart.css">
 
 <body>
     <div id="nav">
         <div>
-        <img id="menu" src="images\menu-removebg.png"/>
         <a href="home.html">
           <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
         </a>
         </div>
-        <!-- <img src="images/cart-removebg-preview.png"> -->
         <div>
-            <!-- <span id="search">SEARCH</span> -->
-            <!-- <a id="search" href="zee-search.html">search</a> -->
-            <a href="login.html">LOGIN</a>
             <a>HELP</a>
-            <div>
-                <img src="images/cart-removebg-preview.png" alt="">
-                <p><a href="cart.html">0</a></p>
-            </div>
         </div>
     </div>
-    <div>
-        <p>WOMAN</p>
-        <P>MAN</P>
-        <P>KIDS</P>
+    <div id="head">
+        <a>CART</a>
+        <a>FAVIOURITES</a>
     </div>
-    <input id="searchbar" placeholder="ENTER SEARCH TERMS"/>
-    <div id="res"></div>
-    <div id="trends">
-        <p><b>Trends</b></p>
-        <p>DRESS</p>
-        <p>DISNEY</p>
-        <p>JACKETS</p>
-        <p>CHRISTMAS</p>
+    <div id="place">
+        <p id="price"></p>
+        <button id="order">CONTINUE</button>
+    </div>
+    <div id="res">
+        <p id="emt">YOUR BASKET IS EMPTY</p>
     </div>
     <div id="bottomsec">
         <div id="bcards">
@@ -101,51 +84,41 @@
     </div>
 </body>
 </html>
-
 <script>
-    document.querySelector("#searchbar").addEventListener("focus", function(){
-        document.querySelector("#trends").style.display = "block"
-    })
 
-    document.querySelector("#searchbar").addEventListener("blur", function(){
-        document.querySelector("#trends").style.display = "none"
-    })
+    // document.querySelector("#price").innerText = 
 
-    let url = "";
-    
-    document.querySelector("#searchbar").addEventListener("keyup", search);function search(){
-        let val = document.querySelector("#searchbar").value;
-        if(val !== ""){
-            url = "https://636e297ab567eed48ad4f1db.mockapi.io/Products?search="+val;
+    function check(){
+        if(localStorage.getItem("qty") !== null){
+            document.querySelector("#emt").style.display = "hidden";
+            document.querySelector("#place").style.display = "flex";
             getdata();
-            console.log(url);
         }
-        else{
-            data = [];
-            display(data);
-        }
-        
     }
+    
+    document.querySelector("#order").addEventListener("click", function(){
+        location.href = "order.html"
+    })
+
+    let url = "https://636e297ab567eed48ad4f1db.mockapi.io/Products/2"
 
     async function getdata(){
         try{
             let res = await fetch(url);
             let out = await res.json();
-            data = [...out]
-            display(out);
-            console.log(data);
             console.log(out);
+            display(out);
         }
         catch (err) {
             console.log(err);
         }
     }
-
+    check();
     // getdata();
 
-    function display(data){
+    function display(elem){
         document.querySelector("#res").innerHTML = "";
-        data.forEach(elem => {
+        // data.forEach(elem => {
             let div = document.createElement("div");
             let div2 = document.createElement("div");
 
@@ -159,13 +132,49 @@
             let Price = document.createElement("p");
             Price.innerText = elem.price;
 
-            div.append(proimg,div2);
-            div2.append(Title, Price);
-            div.addEventListener("click",function(){
-                location.href = "product.html";
-            })
-            document.querySelector("#res").append(div);
-        });
-    }
+            let div3 = document.createElement("div");
+            let add = document.createElement("button");
+            add.innerText = "+";
+            add.addEventListener("click", function(){
+                num.innerText = +num.innerText + 1;
+                document.querySelector("#price").innerText = "Rs."+num.innerText*1590;
 
+                localStorage.setItem("tprice",document.querySelector("#price").innerText)
+            })
+            let sub = document.createElement("button");
+            sub.innerText = "-";
+            sub.addEventListener("click", function(){
+                if(+num.innerText > 0){
+                    num.innerText = +num.innerText - 1;
+                    document.querySelector("#price").innerText = "Rs."+num.innerText*1590;
+                    localStorage.setItem("tprice",document.querySelector("#price").innerText)
+                }
+            })
+
+            let num = document.createElement("p");
+            num.innerText = 1;
+
+            document.querySelector("#price").innerText = "Rs."+num.innerText*1590;
+            localStorage.setItem("tprice",document.querySelector("#price").innerText)
+
+            let div4 = document.createElement("div");
+            let del = document.createElement("button");
+            del.innerText = "DELETE";
+            del.addEventListener("click", function(){
+                localStorage.removeItem("qty");
+                document.querySelector("#res>div").innerHTML = "";
+                // check();
+            })
+    
+            div3.append(sub,num,add);
+            div4.append(del);
+
+            div.append(proimg,div2,div3,div4);
+            div2.append(Title, Price);
+            // div.addEventListener("click",function(){
+            //     location.href = "product.html";
+            // })
+            document.querySelector("#res").append(div);
+        // });
+    }
 </script>

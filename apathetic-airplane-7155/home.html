@@ -7,13 +7,16 @@
     <title>ZEE STORE India | New Collection</title>
 </head>
 
-<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="styles/home.css">
+<link rel="stylesheet" href="styles/nav.css">
+<link rel="stylesheet" href="styles/bottomsec.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
     <div id="nav">
         <div>
         <img id="menu" src="images\menu-removebg.png"/>
-        <a href="home.html">
+        <a href="home.html" id="alogo">
           <img id="logo" src="images\ZEE-removebg-preview (1).png"/>   
         </a>
         
@@ -22,11 +25,11 @@
         <div>
             <!-- <span id="search">SEARCH</span> -->
             <a id="search" href="zee-search.html">search</a>
-            <a href="login.html">LOGIN</a>
+            <a id="log" href="login.html">LOGIN</a>
             <a>HELP</a>
             <div>
                 <img src="images/cart-removebg-preview.png" alt="">
-                <p>0</p>
+                <p><a href="cart.html">0</a></p>
             </div>
         </div>
     </div>
@@ -67,16 +70,27 @@
             <a>JOIN LIFE</a>
             <a>+INFO</a>
         </div>
-    </div>
-    <!-- <div id="fde"></div>
-    <button onclick = "document.getElementById('fde').classList.toggle('hide')">
-        Toggle
-      </button> -->
+        </div>
+        <!-- <div id="buttondiv">
+            
+        </div> -->
+        <div id="imgs">
+                <button id="left">◄</button>
+                <button id="right">►</button>
+                <a id="womens" href="womens.html">
+                    <img class="mySlides" src="https://static.zara.net/photos///contents/mkt/spots/aw22-north-woman-new/subhome-xmedia-45//w/1366/IMAGE-landscape-default-fill-72e23389-afdf-460f-95e6-0b2eb0aab4d3-default_0.jpg?ts=1667838049147" style="width:100%">
+                </a>
+                
+                <img class="mySlides" src="https://static.zara.net/photos///contents/mkt/spots/aw22-north-man-new/subhome-xmedia-45//w/1366/IMAGE-landscape-fill-d571aa9f-97a1-483b-86dc-d18a9506c9fa-default_0.jpg?ts=1668010456418" style="width:100%">
+
+                <img class="mySlides" src="https://static.zara.net/photos///contents/mkt/spots/aw22-north-kids-babyboy/subhome-xmedia-45//w/1366/IMAGE-landscape-fill-d8daaf2b-5be6-4c65-bd3d-c40a88f7f5fd-default_0.jpg?ts=1667922594606" style="width:100%">
+            
+        </div>
 </body>
 </html>
 
 <script>
-    // document.querySelector("#menudiv").classList.toggle("hide");
+
     document.querySelector("#menu").addEventListener("click", function(){
        if(document.querySelector("#menudiv").style.display == "block"){
             document.querySelector("#menudiv").style.display = "none";
@@ -89,4 +103,57 @@
     document.querySelector("#logo").addEventListener("click", function(){
         location.href="home.html"
     })
+    let arr = document.querySelectorAll(".mySlides");
+    console.log(arr);
+    let num = 0;
+    document.querySelector("#right").addEventListener("click", function(){
+        if(num == arr.length-1){
+            num = 0;
+        }
+        else{
+            num++;
+        }
+        disimg(arr,num)
+        console.log(num);
+        // for(let x = 0; x < arr.length; x++){
+            // arr[num].setAttribute("class","w3-container w3-center w3-animate-right")
+            arr[num].style.zIndex="-1"
+            arr[num].style.width = "100%"
+            arr[num].style.margin = "0px"
+        // }
+    })
+    document.querySelector("#left").addEventListener("click", change)
+    function change(){
+        if(num == 0){
+            num = arr.length-1
+        }
+        else{
+           num--;
+        }
+        console.log(num);
+        disimg(arr,num)
+        // for(let x = 0; x < arr.length; x++){
+            // arr[num].setAttribute("class","w3-container w3-center w3-animate-left")
+                arr[num].style.zIndex="-1"
+                arr[num].style.width = "100%"
+
+        // }
+    }
+    function disimg(arr,num){
+        for(let x = 0; x < arr.length; x++){
+            if(x == num){
+                arr[x].style.display = ""
+                
+            }
+            else{
+                arr[x].style.display = "none"
+            }
+        }
+    }
+    disimg(arr,num)
+    // setInterval("change()",5000)
+
+    if(localStorage.getItem("email") !== null) {
+        document.querySelector("#log").innerText = "LOGOUT"
+    }
 </script>
